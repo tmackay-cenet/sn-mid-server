@@ -9,7 +9,9 @@ ADD asset/* /opt/
 
 RUN apt-get -q update && apt-get install -qy unzip \
     supervisor \
-    wget && \
+    wget \
+    gettext \
+    procps && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
